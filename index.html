@@ -5,28 +5,36 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Health AI for All Network</title>
-  <link rel="stylesheet" href="styles/newsite.css">
+  <link rel="stylesheet" href="styles/site.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 
 <body>
   <!-- Header -->
   <header class="header">
     <div class="logo-container">
-      <img src="images/hainet-logo.png" alt="HAINET Logo" class="logo">
+      <span class="logo-text">HAINET.ORG</span>
     </div>
-    <nav>
+    <button id = "nav-hamburger" class = "hidden">&#9776;</button>
+    <nav id = "nav-list" >
       <ul class="nav-list">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#highlights">Highlights</a></li>
-        <li><a href="#get-involved">Get Involved</a></li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="haicon.html">HAICON</a></li>
       </ul>
     </nav>
   </header>
 
+
+
+
   <!-- Hero Section -->
   <section id="home" class="hero-section">
     <div class="hero-content">
-      <h1>Health AI for All Network</h1>
+      <h1>Health AI for All Network (HAINET) </h1>
       <p>
         A global collaboration to advance Health AI for the benefit of humanity, especially in resource-limited settings.
       </p>
@@ -91,6 +99,10 @@
   <footer class="footer">
     <p>© 2024 Health AI for All Network. All Rights Reserved.</p>
   </footer>
+
+  <script src = "scripts/jquery-3.7.1.js"></script>
+  <script src = "scripts/script.js"></script>
+
 </body>
 
 </html>
