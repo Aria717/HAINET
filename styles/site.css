@@ -244,6 +244,12 @@ body {
   margin-bottom: 0.5rem;
 }
 
+
+#get-involved {
+  margin-top: 50px; /* Ensure there's space to scroll */
+}
+
+
 h1, h2 {
   color: #2c3e50;
   text-align: center;
