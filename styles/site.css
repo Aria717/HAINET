@@ -41,6 +41,7 @@ body {
   padding: 10px 20px; /* Add some spacing */
   height: 100px; /* Adjust header height */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional shadow */
+  width: 100%;
 }
 
 /* Logo Container */
@@ -96,6 +97,7 @@ nav {
   font-size: 1.5rem;
   color: #fff;
   cursor: pointer;
+  border-radius: 10%;
 }
 
 .hidden{
@@ -596,4 +598,28 @@ tr:nth-child(even) {
     font-size: 12px;
   }
 
+}
+
+/*map*/
+
+#map {
+  display: block;
+  width: 100%;
+  height: 50vh;
+  border: 2px solid #ff914d;
+  border-radius: 10px;
+  opacity: 80% ;
+  position: relative; /* Ensure positioning for the overlay */
+}
+
+#map::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #ff914d;
+  opacity: 0.5; /* Adjust opacity of the overlay */
+  border-radius: 10px; /* Ensure the overlay matches the border radius */
 }
