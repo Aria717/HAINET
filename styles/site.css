@@ -36,19 +36,21 @@ body {
 /* General Header Styles */
 .header {
   display: flex;
-  align-items: center;
-  justify-content: space-between; /* Space out the content */
-  padding: 10px 20px; /* Add some spacing */
-  height: 100px; /* Adjust header height */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional shadow */
+  justify-content: space-between;
+  align-items: center; /* Vertically align logo and hamburger */
+  padding: 10px 20px;
+  height: 100px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   width: 100%;
+  position: relative;
 }
 
 /* Logo Container */
 .logo-container {
   display: flex;
   align-items: center;
-  gap: 10px; /* Space between the logo and text */
+  flex-grow: 1;
+  max-width: 100%; /* Ensure logo container is responsive */
 }
 
 /* Logo Image */
@@ -67,15 +69,18 @@ body {
 /* Navigation Styles */
 nav {
   display: flex;
-  align-items: center;
+  gap: 20px; /* Space between menu items */
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 .nav-list {
   display: flex;
-  list-style-type: none; /* Remove bullet points */
-  gap: 20px; /* Space between navigation items */
-  margin: 0;
+  gap: 20px; /* Space between menu items */
+  list-style: none;
   padding: 0;
+  margin: 0;
 }
 
 .nav-list li a {
@@ -100,10 +105,9 @@ nav {
   border-radius: 10%;
 }
 
-.hidden{
+.hidden {
   display: none;
 }
-
 
 
 /* General Hero Section Styles */
@@ -308,6 +312,12 @@ ul li {
   margin-bottom: 10px;
 }
 
+.about-section{
+  background-color: #fffefe;
+  border-radius: 2%;
+}
+
+
 .members {
   display: flex;
   flex-wrap: wrap;
@@ -467,13 +477,41 @@ tr:nth-child(even) {
 /* Responsive Design for Members Section */
 @media (max-width: 1024px) {
 
+  .header {
+    justify-content: space-between;
+    padding: 0;
+    margin: 0;
+    
+  }
+
+  .header .img{
+    width: 80%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .logo-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .logo-text h1{
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  #nav-hamburger{
+    margin-left:5px;
+  }
+
   #nav-list {
     position: absolute;
-    top: 80px;
-    right: 20px;
-    background-color: #f7f7f7;
-    padding: 10px;
-    border-radius: 8px;
+    top: 100px;
+    left: 0;
+    right: 0;
+    background-color: white;
+    padding: 20px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   }
 
