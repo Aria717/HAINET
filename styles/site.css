@@ -11,12 +11,19 @@
   font-variation-settings: "wdth" 100;
 }
 
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+  box-sizing: border-box; /* Ensure padding and border are included in dimensions */
+  width: 100%; /* Prevent content from expanding beyond the viewport */
+}
+
+
 body {
   font-family: 'Arial', sans-serif;
   line-height: 1.6;
   color: #333;
-  margin: 0;
-  padding: 0;
   font-family: "Helvetica";
   background-image: url(../images/kids-group.png) !important;
   background-size: cover;
@@ -26,101 +33,143 @@ body {
   opacity: 10;
 }
 
+/* General Header Styles */
 .header {
-  justify-content: space-between;
+  display: flex;
   align-items: center;
-  padding: 1rem 2rem;
+  justify-content: space-between; /* Space out the content */
+  padding: 10px 20px; /* Add some spacing */
+  height: 100px; /* Adjust header height */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional shadow */
 }
 
-
-#title {
-  background-color: #ff914d;
-}
-
+/* Logo Container */
 .logo-container {
   display: flex;
-  justify-content: center;
   align-items: center;
-  padding: 10px 20px;
+  gap: 10px; /* Space between the logo and text */
 }
 
-.logo-text {
-  font-family: 'Arial', sans-serif;
-  font-size: 36px;
+/* Logo Image */
+.logo-container img {
+  height: 200px; /* Adjust logo size */
+  width: auto;
+}
+
+/* Logo Text */
+.logo-text span {
+  font-size: 2rem;
   font-weight: bold;
-  color: #ff914d;
-  letter-spacing: 2px;
-  text-transform: uppercase;
+  color: #FFA559; 
 }
 
-/* nav- interactivity **/
+/* Navigation Styles */
+nav {
+  display: flex;
+  align-items: center;
+}
+
+.nav-list {
+  display: flex;
+  list-style-type: none; /* Remove bullet points */
+  gap: 20px; /* Space between navigation items */
+  margin: 0;
+  padding: 0;
+}
+
+.nav-list li a {
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #FFA559; 
+  transition: color 0.3s ease;
+}
+
+.nav-list li a:hover {
+  color: #FFA559; /* Light hover effect */
+}
+
+/* Hamburger Button */
+#nav-hamburger {
+  background: #FFA559;
+  border: none;
+  font-size: 1.5rem;
+  color: #fff;
+  cursor: pointer;
+}
+
 .hidden{
   display: none;
 }
 
-#nav-hamburger {
-  width: 40px;
-  height: 40px;
-  background-color: #ff914d;
-  color: white;
-  font-size: 1.5rem;
-  border: none;
-  padding: 5px;
-  cursor: pointer;
-  border-radius: 5px;
-  margin-left: 90%;
-  box-shadow: none;
+
+
+/* General Hero Section Styles */
+.hero-section {
   display: flex;
+  flex-direction: column; /* Stack content vertically by default */
   align-items: center;
   justify-content: center;
-}
-
-#nav-hamburger:hover {
-  background-color: #da5807;
-}
-
-#nav-hamburger.hidden {
-  display: none;
-}
-
-
-.nav-list {
-  list-style: none;
-  display: flex;
-  gap: 20px;
-  margin: 20px;
-  justify-content: center;
-}
-
-
-.nav-list li {
-  margin: 0;
-}
-
-.nav-list a {
-  text-decoration: none;
-  color: #ff914d;
-  font-weight: bold;
-  font-size: 1.25rem;
-}
-
-.hero-section {
-  background-color: #ff914d;
-  color: white;
+  background-color: #FFA559;
+  padding: 20px;
+  max-width: 100%; /* Prevent horizontal overflow */
   text-align: center;
-  padding: 4rem 2rem;
+  border-radius: 8px; /* Rounded corners */
+  box-sizing: border-box;
 }
 
+/* Hero Content */
 .hero-content h1 {
-  color: white;
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
+  font-size: 2rem; /* Adjust for better visibility */
+  color: #fff;
+  margin-bottom: 20px;
 }
 
-.hero-content p {
-  margin-bottom: 1.5rem;
+.hero-content p{
+  color: white;
+}
+
+/* Date, Time, and Venue Section */
+.date-time-venue {
+  width: 100%; /* Take full width of container */
+  max-width: 600px; /* Constrain to a reasonable width */
   text-align: center;
 }
+
+.date-time-venue h2 {
+  font-size: 1.2rem;
+  color: #fff;
+  margin-bottom: 5px;
+}
+
+.date-time-venue p {
+  font-size: 1rem;
+  color: #fff;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+/* Apply Now Button */
+#haicon-button {
+  background-color: #fefaf8; 
+  border: none;
+  border-radius: 4px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#haicon-button a {
+  text-decoration: none;
+  color:#FFA559;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+#haicon-button:hover {
+  background-color: #dbd6d1; /* Light hover effect */
+}
+
 
 .highlights-section {
   text-align: center;
@@ -170,6 +219,7 @@ body {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1px;
+  color:white;
 }
 
 .highlight p {
@@ -320,28 +370,13 @@ ul li {
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  padding: 3rem 10%;
+  padding: 0.5rem 10%;
   border-radius: 12px;
   max-width: 1200px;
   margin: 3rem auto;
 }
 
-.date-time-venue {
-  text-align: center;
-  padding: 2rem;
- 
-}
 
-.date-time-venue h2 {
-  font-size: 1rem;
-  margin-bottom: 1rem;
-  color: #ffffff;
-}
-
-.date-time-venue p {
-  font-size: 1.2rem;
-  text-align: center;
-}
 
 .agenda-highlights {
   display: flex;
@@ -351,7 +386,7 @@ ul li {
 
 .agenda, .highlights {
   flex: 1 1 45%;
-  background: #f5f5f5;
+  background: #ffffff;
   padding: 1.5rem;
   border-radius: 8px;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
@@ -383,39 +418,8 @@ ul li {
   text-align: center;
 }
 
-#haicon-button {
-  background-color: #fffefd;
-  color: #ff914d;
-  font-size: 1.2rem;
-  font-weight: 600;
-  padding: 12px 24px;
-  border: none;
-  border-radius: 25px;
-  cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.2s ease;
-  text-decoration: none;
-  display: inline-block;
-  text-align: center;
-  margin-top: 2rem;
-}
 
-#haicon-button:hover {
-  background-color: #e9e7e6;
-  transform: scale(1.05);
-}
 
-#haicon-button a {
-  text-decoration: none;
-  color: #ff914d;
-}
-
-.download-button-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  margin-top: 2rem;
-}
 
 /**table*/
 .container {
@@ -458,33 +462,25 @@ tr:nth-child(even) {
 
 
 
-
-
-
-
-
-
 /* Responsive Design for Members Section */
 @media (max-width: 1024px) {
-  nav ul {
+
+  #nav-list {
+    position: absolute;
+    top: 80px;
+    right: 20px;
+    background-color: #f7f7f7;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .nav-list {
     flex-direction: column;
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    align-items: flex-start;
-    }
+    gap: 10px; /* Adjust spacing for vertical layout */
+  }
 
-    nav ul li {
-        margin: 0;
-        padding: 5px 10px;
-    }
-
-    nav ul li a {
-        font-size: 16px;
-        padding: 0;
-        font-weight: 500;
-    }
-
+  
   .members {
     gap: 20px;
     margin: 20px 5%;

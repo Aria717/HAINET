@@ -7,8 +7,10 @@
     $(document).ready(function() {
         if (window.matchMedia("(max-width: 1000px)").matches) {
           $("#nav-hamburger").removeClass("hidden");
+          $("#nav-list").addClass("hidden");
         } else {
           $("#nav-hamburger").addClass("hidden");
+          
         }
       });
       
