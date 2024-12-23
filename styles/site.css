@@ -388,9 +388,7 @@ ul li {
   margin: 3rem auto;
 }
 
-.container h3{
-  text-align: center;
-}
+
 
 .agenda-highlights {
   display: flex;
@@ -473,6 +471,9 @@ tr:nth-child(even) {
   color: #555;
 }
 
+.container h3{
+  text-align: left;
+}
 
 
 
