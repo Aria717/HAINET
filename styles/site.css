@@ -135,6 +135,26 @@ nav {
   color: white;
 }
 
+#map-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin: 5px;
+}
+
+#map-info img {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  height: 300px; /* Adjust the height as needed */
+  object-fit: cover; /* Ensures the images are scaled proportionally */
+}
+
+
+
+
+
+
 /* Date, Time, and Venue Section */
 .date-time-venue {
   width: 100%; /* Take full width of container */
@@ -316,6 +336,7 @@ ul li {
   background-color: #fffefe;
   border-radius: 2%;
 }
+
 
 
 .members {
@@ -524,6 +545,14 @@ tr:nth-child(even) {
   }
 
   
+  #map-info {
+    flex-direction: column;
+    max-width: 80%;
+    align-items: center;
+  
+    }
+
+
   .members {
     gap: 20px;
     margin: 20px 5%;
@@ -639,15 +668,4 @@ tr:nth-child(even) {
     font-size: 12px;
   }
 
-}
-
-/*map*/
-
-
-
-#map img{
-  width: 100%; 
-  height: auto; 
-  display: block;
-  
 }
