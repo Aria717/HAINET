@@ -63,7 +63,7 @@ body {
 .logo-text span {
   font-size: 2rem;
   font-weight: bold;
-  color: #FFA559; 
+  color: #ff6700; 
 }
 
 /* Navigation Styles */
@@ -87,7 +87,7 @@ nav {
   text-decoration: none;
   font-size: 1.2rem;
   font-weight: 600;
-  color: #FFA559; 
+  color: #ff6700; 
   transition: color 0.3s ease;
 }
 
@@ -97,7 +97,7 @@ nav {
 
 /* Hamburger Button */
 #nav-hamburger {
-  background: #FFA559;
+  background: #ff6700;
   border: none;
   font-size: 1.5rem;
   color: #fff;
@@ -116,7 +116,7 @@ nav {
   flex-direction: column; /* Stack content vertically by default */
   align-items: center;
   justify-content: center;
-  background-color: #FFA559;
+  background-color: #ff6700;
   padding: 20px;
   max-width: 100%; /* Prevent horizontal overflow */
   text-align: center;
@@ -167,7 +167,7 @@ nav {
 
 #haicon-button a {
   text-decoration: none;
-  color:#FFA559;
+  color:#ff6700;
   font-size: 1rem;
   font-weight: bold;
 }
@@ -184,7 +184,7 @@ nav {
 }
 
 .highlights-section h2 {
-  color: #ff914d;
+  color: #ff6700;
   font-size: 2.5rem;
   font-family: 'Poppins', sans-serif;
   font-weight: 700;
@@ -203,7 +203,7 @@ nav {
 }
 
 .highlight {
-  background-color: #ff914d;
+  background-color: #ff6700;
   color: white;
   padding: 2rem;
   flex: 1;
@@ -291,7 +291,7 @@ nav {
 
 
 h1, h2 {
-  color:#ff914d;
+  color:#ff6700;
   text-align: center;
   margin-bottom: 20px;
   size: 5rem;
@@ -372,7 +372,7 @@ ul li {
 }
 
 .footer {
-  background: #ff914d;
+  background: #ff6700;
   color: white;
   text-align: center;
   padding: 1rem 0;
@@ -411,7 +411,7 @@ ul li {
 }
 
 .agenda h2, .highlights h2 {
-  color: #ff914d;
+  color: #ff6700;
   margin-bottom: 1rem;
   font-size: 1.8rem;
 }
@@ -444,7 +444,7 @@ ul li {
 }
 
 h3{
-  color: #ff914d;
+  color: #ff6700;
   text-align: center;
 }
 
@@ -457,14 +457,14 @@ table {
 th, td {
   padding: 10px;
   text-align: left;
-  border: 1px solid #ddd;
+  border: 1px solid #877e7e;
 }
 th {
-  background-color:  #ff914d;
+  background-color:  #ff6700;
   color: white;
 }
 tr:nth-child(even) {
-  background-color: #f9f9f9;
+  background-color: #d8cfc9;
 }
 .remarks {
   font-style: italic;
@@ -640,24 +640,11 @@ tr:nth-child(even) {
 
 /*map*/
 
-#map {
-  display: block;
-  width: 100%;
-  height: 50vh;
-  border: 2px solid #ff914d;
-  border-radius: 10px;
-  opacity: 80% ;
-  position: relative; /* Ensure positioning for the overlay */
-}
 
-#map::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #ff914d;
-  opacity: 0.5; /* Adjust opacity of the overlay */
-  border-radius: 10px; /* Ensure the overlay matches the border radius */
+
+#map img{
+  width: 100%; 
+  height: auto; 
+  display: block;
+  
 }
