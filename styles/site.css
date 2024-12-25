@@ -45,6 +45,10 @@ body {
   position: relative;
 }
 
+
+.header a{
+  text-decoration: none;
+}
 /* Logo Container */
 .logo-container {
   display: flex;
@@ -53,11 +57,6 @@ body {
   max-width: 100%; /* Ensure logo container is responsive */
 }
 
-/* Logo Image */
-.logo-container img {
-  height: 200px; /* Adjust logo size */
-  width: auto;
-}
 
 /* Logo Text */
 .logo-text span {
@@ -134,6 +133,7 @@ nav {
 .hero-content p{
   color: white;
   font-size: 1.2rem;
+  text-align:center;
 }
 
 #map-info {
@@ -150,10 +150,6 @@ nav {
   height: 300px; /* Adjust the height as needed */
   object-fit: cover; /* Ensures the images are scaled proportionally */
 }
-
-
-
-
 
 
 /* Date, Time, and Venue Section */
@@ -251,16 +247,11 @@ nav {
 
 .highlight p {
   font-size: 1rem;
-  line-height: 1.6;
   margin-bottom: 0;
   font-weight: 400;
-}
-
-.highlight p {
-  margin-top: 0.5rem;
   text-align: center;
   font-family: 'Arial', sans-serif;
-  letter-spacing: 0.5px;
+  
 }
 
 .collaboration-section {
@@ -305,6 +296,10 @@ nav {
   margin-bottom: 0.5rem;
 }
 
+.card p{
+  text-align: center;
+}
+
 
 #get-involved {
   margin-top: 50px; /* Ensure there's space to scroll */
@@ -338,7 +333,9 @@ ul li {
   border-radius: 2%;
 }
 
-
+.members-list-header{
+  font-size: 1.8rem;
+}
 
 .members {
   display: flex;
@@ -357,6 +354,10 @@ ul li {
   max-width: 300px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0);
   text-align: center;
+}
+
+.member a {
+  text-decoration: none;
 }
 
 .member img {
@@ -476,22 +477,41 @@ table {
   border-collapse: collapse;
   margin: 20px 0;
 }
+
 th, td {
   padding: 10px;
   text-align: left;
   border: 1px solid #877e7e;
 }
+
 th {
-  background-color:  #ff6700;
+  background-color: #ff6700;
   color: white;
 }
+
 tr:nth-child(even) {
   background-color: #d8cfc9;
 }
+
+table th:nth-child(1), table td:nth-child(1) {
+  width: 15%; /* Adjust the percentage as needed */
+}
+
+table th:nth-child(2), table td:nth-child(2) {
+  width: 15%; /* Adjust the percentage as needed */
+}
+
+table th:nth-child(n+3), table td:nth-child(n+3) {
+  width: auto; /* Allow remaining columns to fill the rest of the space */
+}
+
 .remarks {
   font-style: italic;
   color: #555;
+  max-width: 500px;
 }
+
+
 
 .container h3{
   text-align: left;
@@ -504,7 +524,6 @@ tr:nth-child(even) {
   background-color: #ffefd5; /* Pale yellow background to make it stand out */
   padding: 2rem;
   text-align: center;
-  border: 2px solid #ffb347; /* Orange border to grab attention */
   border-radius: 10px;
   margin: 2rem auto;
   width: 90%;
@@ -538,11 +557,10 @@ tr:nth-child(even) {
   background-color: #e65c00; /* Slightly darker orange on hover */
 }
 
-
-
-
-
-
+footer a{
+  text-decoration: none;
+  color:white;
+}
 
 
 /* Responsive Design for Members Section */
@@ -716,3 +734,96 @@ tr:nth-child(even) {
   }
 
 }
+
+
+/**media query for printing*/
+/* General print styling */
+@media print {
+  /* Hide unnecessary elements */
+ 
+  main, main * {
+    visibility: visible;
+  }
+
+  .header, footer, button, nav {
+    display: none;
+  }
+
+  /* Ensure the date and venue are prominent */
+  .date-time-venue {
+    border-bottom: 2px solid #333;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+  }
+
+  .date-time-venue h2 {
+    margin: 0;
+    font-size: 18px;
+    color: #222;
+  }
+
+  .date-time-venue p {
+    margin: 5px 0;
+    font-size: 14px;
+  }
+
+  /* Styling for the schedule tables */
+  .container {
+    margin-top: 20px;
+  }
+
+  h1, h2, h3 {
+    font-size: 16px;
+    margin: 10px 0;
+    color: #000;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+  }
+
+  table thead {
+    background-color: #f4f4f4;
+  }
+
+  table th, table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+    font-size: 12px;
+  }
+
+  table th {
+    background-color: #f9f9f9;
+    font-weight: bold;
+  }
+
+  table tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+
+  .remarks {
+    text-align: center;
+    font-style: italic;
+  }
+
+  /* Prevent page breaks in the middle of tables */
+  table {
+    page-break-inside: avoid;
+  }
+
+  /* Ensure workshops and townhall appear cleanly */
+  .container h3 {
+    margin-top: 20px;
+    font-size: 14px;
+  }
+
+  /* Remove buttons or links */
+  a {
+    text-decoration: none;
+    color: #000;
+  }
+}
+

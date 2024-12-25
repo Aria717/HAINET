@@ -32,3 +32,6 @@
       $("#nav-list").addClass("hidden");
     }
   });
+
+
+  document.getElementById('year').textContent = new Date().getFullYear();
