@@ -557,9 +557,14 @@ table th:nth-child(n+3), table td:nth-child(n+3) {
   background-color: #e65c00; /* Slightly darker orange on hover */
 }
 
+footer{
+  display: flex;
+}
+
 footer a{
   text-decoration: none;
   color:white;
+  padding: 4px;
 }
 
 
