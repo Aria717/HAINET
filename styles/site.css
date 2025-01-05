@@ -25,7 +25,7 @@ body {
   line-height: 1.6;
   color: #333;
   font-family: "Helvetica";
-  background-image: url(../images/kids-group.png) !important;
+  /*background-image: url(../images/kids-group.png) !important;*/
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -478,6 +478,12 @@ table {
   margin: 20px 0;
 }
 
+table ul{
+  list-style-type: none; 
+  padding: 0; 
+  margin: 0
+}
+
 th, td {
   padding: 10px;
   text-align: left;
@@ -521,14 +527,14 @@ table th:nth-child(n+3), table td:nth-child(n+3) {
 /*highlight haicon*/
 
 .event-highlight-section {
-  background-color: #ffefd5; /* Pale yellow background to make it stand out */
+  /*background-color: #f5ebdb;  Pale yellow background to make it stand out */
   padding: 2rem;
   text-align: center;
   border-radius: 10px;
   margin: 2rem auto;
   width: 90%;
   max-width: 800px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for a polished look */
+  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); Subtle shadow for a polished look */
 }
 
 .event-highlight-content h2 {
